@@ -1,10 +1,10 @@
 {
-  "name": "with-redux",
+  "name": "dashboard",
   "version": "1.0.0",
   "scripts": {
-    "dev": "next app -p 4000",
+    "dev": "next -p 4000",
     "build": "next build",
-    "start": "next start"
+    "start": "next start -p 4000"
   },
   "dependencies": {
     "next": "^8.1.0",
