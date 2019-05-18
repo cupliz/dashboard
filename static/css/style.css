@@ -1,0 +1,34 @@
+.container-fluid{
+  height: 1024px;
+}
+.theme-dark {
+  background-color: #111316;
+  color: #FFFFFF;
+  font-family: Arial;
+}
+
+.theme-dark .main-title {
+  font-size: 20px;
+  letter-spacing: 5px;
+}
+.theme-dark .card {
+  background-color: #16191C !important;
+  box-shadow: 4px 4px #0C0E10;
+  margin: 10px;
+}
+.theme-dark .card .card-footer{
+  background-color: #191C1F !important;
+  color: #FFFFFF !important;
+  font-size: 11px;
+  border-top: #fff;
+}
+.theme-dark .card .card-text,
+.theme-dark .card .card-body {
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+.theme-dark .card .card-title{
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
