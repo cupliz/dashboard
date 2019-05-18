@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import Header from "../components/Header";
 import BoxTitle from "../components/BoxTitle";
 import FinancialMetrics from "../components/FinancialMetrics";
 import Turnover from "../components/Turnover";
@@ -15,27 +16,25 @@ class Index extends React.Component {
 
   render() {
     return (
-      <div className="container-fluid theme-dark">
-        <div className="row">
-          <div className="col-sm">
-            <span className="main-title">OVERVIEW</span>
-          </div>
-        </div>
-        <div className="row no-gutters">
-          <div className="col-sm">
-            <BoxTitle />
-            <FinancialMetrics />
-            <Turnover />
-          </div>
-          <div className="col-sm">
-            <KYC />
-            <WebAnalytics />
-            <CompositeScoring />
-          </div>
-          <div className="col-sm">
-            <News />
-            <PredictiveAnalytics />
-            <RiskCompositeIndex />
+      <div className="theme-dark">
+        <Header />
+        <div className="container-fluid">
+          <div className="row no-gutters">
+            <div className="col-sm">
+              <BoxTitle />
+              <FinancialMetrics />
+              <Turnover />
+            </div>
+            <div className="col-sm">
+              <KYC />
+              <WebAnalytics />
+              <CompositeScoring />
+            </div>
+            <div className="col-sm">
+              <News />
+              <PredictiveAnalytics />
+              <RiskCompositeIndex />
+            </div>
           </div>
         </div>
       </div>

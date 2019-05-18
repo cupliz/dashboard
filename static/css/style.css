@@ -1,18 +1,36 @@
-.container-fluid{
-  height: 1024px;
-}
+
 .theme-dark {
+  height: 1080px;
   background-color: #111316;
   color: #FFFFFF;
   font-family: Arial;
 }
-
-.theme-dark .main-title {
-  font-size: 20px;
-  letter-spacing: 5px;
+.theme-dark .header-search {
+  background-color: #171A1D;
+  height: 50px !important;
+}
+.theme-dark .header-search input{
+  float: right;
+  clear: both;
+  margin: 0 10px;
+  height: 50px !important;
+  width: 20%;
+  padding: 0 20px;
+  background-color: #15171A !important;
+  border: none;
+  font-size: 18px;
+  color: #2B2E30;
+}
+.theme-dark .header-title {
+  font-size: 16px;
+  letter-spacing: 8px;
+  font-weight: 700;
+  margin: 0 10px;
+  margin-top: 28px;
+  margin-bottom: 5px;
 }
 .theme-dark .card {
-  background-color: #16191C !important;
+  background-color: #15181B !important;
   box-shadow: 4px 4px #0C0E10;
   margin: 10px;
 }
@@ -21,6 +39,7 @@
   color: #FFFFFF !important;
   font-size: 11px;
   border-top: #fff;
+  height: 50px;
 }
 .theme-dark .card .card-text,
 .theme-dark .card .card-body {
