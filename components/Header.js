@@ -6,11 +6,15 @@ class Header extends React.Component {
   render() {
     return (
       <div>
-        <div className="header-search container-fluid">
-          <input type="text" placeholder="Search" />
+        <div className="header-search">
+          <div className="container-fluid">
+            <input type="text" placeholder="Search" />
+          </div>
         </div>
-        <div className="header-title container-fluid">
-          <span>OVERVIEW</span>
+        <div className="header-title">
+          <div className="container-fluid">
+            <span>OVERVIEW</span>
+          </div>
         </div>
       </div>
     );
