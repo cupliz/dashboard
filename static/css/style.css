@@ -209,3 +209,12 @@ body {
   background: rgb(110, 110, 110);
   border-radius: 20px;
 }
+
+.tick-down{
+  color: #C11B12 !important;
+  font-size: 90%;
+}
+.tick-up{
+  color: #3BD445;
+  font-size: 90%;
+}

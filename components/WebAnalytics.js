@@ -17,24 +17,24 @@ class WebAnalytics extends React.Component {
             <p className="m-0 text-secondary"><small>Website Rank</small>
             </p>
             <div className="row m-0 p-0 d-flex">
-              <h6>6.7</h6>
-              <img src="../static/image/arrowDown.png" className="ml-2 mt-1" style={{ height: 10 }} />
+              <h6>6.7 </h6>
+              <span className="tick-down">&#9660;</span>
             </div>
           </div>
           <div className="col-4">
             <p className="m-0 text-secondary"><small>Googel Trends</small>
             </p>
             <div className="row m-0 p-0 d-flex">
-              <h6>6.7</h6>
-              <img src="../static/image/arrowDown.png" className="ml-2 mt-1" style={{ height: 10 }} />
+              <h6>6.7 </h6>
+              <span className="tick-down">&#9660;</span>
             </div>
           </div>
           <div className="col-4">
             <p className="m-0 text-secondary"><small>Time on site</small>
             </p>
             <div className="row m-0 p-0 d-flex">
-              <h6>2 mins</h6>
-              <img src="../static/image/arrowDown.png" className="ml-2 mt-1" style={{ height: 10 }} />
+              <h6>2 mins </h6>
+              <span className="tick-down">&#9660;</span>
             </div>
           </div>
         </div>

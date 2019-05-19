@@ -135,11 +135,11 @@ class PredictiveAnalytics extends React.Component {
   tick = (value)=>{
     if(value>0){
       return (
-        <p> <span className="text-success">&#9650;</span>{value} </p>
+        <p> <span className="tick-up">&#9650;</span>{value} </p>
       )
     }else{
       return (
-        <p> <span className="text-danger">&#9660;</span>{value} </p>
+        <p> <span className="tick-down">&#9660;</span>{value} </p>
       )
     }
   }
