@@ -1,19 +1,49 @@
 import React from "react";
 
 class CompositeScoring extends React.Component {
-  componentDidMount() {}
+  componentDidMount() { }
 
   render() {
     return (
       <div className="card">
         <div className="card-body">
-          <h5 className="card-title">Qualitative, Macro & ESG Factors</h5>
-          <p className="card-text">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-          </p>
-        </div>
-        <div className="card-footer">
-          Last updated 3 mins ago
+          <div className="row d-flex justify-content-between pl-3 pr-4">
+            <h5 className="card-title ">Qualitative, Macro & ESG Factors</h5>
+            <div className="row"><div className="rounded-pill"></div><div>Composite Scoring</div></div>
+          </div>
+          <h6 className="text-light mt-2 font-weight-bold">Descriptive</h6>
+          <div className="scroll-table" style={{ height: 300 }}>
+            <table className="table">
+              <tr >
+                <td className="text-secondary pl-0" >Sector</td>
+                <td className="text-light">Software</td>
+              </tr>
+              <tr>
+                <td className="text-secondary pl-0">Business model</td>
+                <td className="text-light">B2B</td>
+              </tr>
+              <tr>
+                <td className="text-secondary pl-0">Revenue model</td>
+                <td className="text-light">Subscription</td>
+              </tr>
+              <tr>
+                <td className="text-secondary pl-0">Firm age</td>
+                <td className="text-light">6 years</td>
+              </tr>
+              <tr>
+                <td className="text-secondary pl-0">Number of employeers</td>
+                <td className="text-light">5D1-1000</td>
+              </tr>
+              <tr className="border-0">
+                <td className="text-secondary pl-0">Firm grawth stage classsification </td>
+                <td className="text-light">Late growth stage</td>
+              </tr>
+              <tr className="border-bottom table-borderless">
+                <td className="text-light pl-0">Executive Team</td>
+                <td ><div className="d-inline-block bg-primary rounded-pill text-center text-light border-0 " style={{ height: 30, width: 50, fontSize: 20, fontWeight: "bold" }}>5.3</div></td>
+              </tr>
+            </table>
+          </div>
         </div>
       </div>
     );
