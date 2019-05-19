@@ -1,4 +1,6 @@
-
+.container-fluid{
+  padding: 0 50px;
+}
 .theme-dark {
   height: 1080px;
   background-color: #111316;
@@ -25,9 +27,9 @@
   font-size: 16px;
   letter-spacing: 8px;
   font-weight: 700;
-  margin: 0 10px;
   margin-top: 28px;
   margin-bottom: 5px;
+  padding: 0 10px;
 }
 .theme-dark .card {
   background-color: #15181B !important;
@@ -77,11 +79,12 @@
 }
 .theme-dark .news .card-body{
   display: block;
-  width: 500px;
+  width: 590px;
   height: 190px;
+  padding: 0 20px;
 }
 .theme-dark .news .slider img{
-  width: 140px;
+  width: 175px;
   height: 80px;
 }
 .theme-dark .news .slider span{
@@ -91,6 +94,33 @@
 .theme-dark .news .slider p{
   margin-top: 5px;
   font-size: 11px;
+}
+
+/* .theme-dark .highcharts-background{
+  background-color:#16191B;
+} */
+
+.theme-dark .kyc .card-footer span{
+  font-size: 13px;
+}
+
+/* RCI */
+.theme-dark .rci .card-body{
+  display: block;
+  width: 590px;
+}
+.theme-dark .rci .slider{
+  text-align: center;
+}
+.theme-dark .rci .slider img{
+  width: 60px;
+  margin-left: 40px;
+}
+.theme-dark .rci .slider p{
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .card .card-body .row .col-3 .rounded-pill{

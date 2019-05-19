@@ -29,15 +29,15 @@ class BoxTitle extends React.Component {
               <div className="text-secondary">Headquarters:</div>
               <div>London.UK</div>
             </div>
-            <div class="col bg-transparent">
+            <div className="col bg-transparent">
               <div className="text-secondary">Founded:</div>
               <div>2013</div>
             </div>
-            <div class="col bg-transparent">
+            <div className="col bg-transparent">
               <div className="text-secondary">SIC:</div>
               <div>62012</div>
             </div>
-            <div class="col bg-transparent">
+            <div className="col bg-transparent">
               <div className="text-secondary">Status:</div>
               <div>Active-Account filed</div>
             </div>
