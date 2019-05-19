@@ -1,11 +1,13 @@
 .container-fluid{
   padding: 0 50px;
 }
-.theme-dark {
-  height: 1080px;
+body {
+  height: 95vh;
   background-color: #111316;
-  color: #FFFFFF;
   font-family: Arial;
+}
+.theme-dark {
+  color: #FFFFFF;
 }
 .theme-dark .header-search {
   background-color: #171A1D;

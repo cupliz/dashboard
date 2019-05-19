@@ -5,9 +5,94 @@ import HighchartsReact from "highcharts-react-official";
 
 class PredictiveAnalytics extends React.Component {
   componentDidMount() {}
-
-  render() {
-    const lineOptions = {
+  columnOptions = (data) => {
+    const defaultOptions = {
+      chart: {
+        // renderTo: (options.chart && options.chart.renderTo) || this,
+        backgroundColor: null,
+        borderWidth: 0,
+        type: "column",
+        margin: [2, 0, 2, 0],
+        width: 120,
+        height: 20,
+        style: {
+          overflow: "visible"
+        },
+        // small optimalization, saves 1-2 ms each sparkline
+        skipClone: true
+      },
+      title: {
+        text: ""
+      },
+      credits: {
+        enabled: false
+      },
+      series: [{
+          data: data,
+          pointStart: 1
+      }],
+      xAxis: {
+        labels: {
+          enabled: false
+        },
+        title: {
+          text: null
+        },
+        startOnTick: false,
+        endOnTick: false,
+        tickPositions: [],
+        lineColor: 'transparent',
+      },
+      yAxis: {
+        endOnTick: false,
+        startOnTick: false,
+        labels: {
+          enabled: false
+        },
+        title: {
+          text: null
+        },
+        tickPositions: [0],
+      },
+      legend: {
+        enabled: false
+      },
+      tooltip: {
+        hideDelay: 0,
+        outside: true,
+        shared: true
+      },
+      plotOptions: {
+        series: {
+          animation: false,
+          lineWidth: 1,
+          shadow: false,
+          states: {
+            hover: {
+              lineWidth: 1
+            }
+          },
+          marker: {
+            radius: 1,
+            states: {
+              hover: {
+                radius: 2
+              }
+            }
+          },
+          fillOpacity: 0.25
+        },
+        column: {
+          color: '#3BD445',
+          negativeColor: "#C11B12",
+          borderColor: "none"
+        }
+      }
+    };
+    return defaultOptions
+  }
+  lineOptions = (categories, data1, data2) => {
+    const options = {
       title: { text: null },
       chart: {
         height: "150px",
@@ -17,18 +102,18 @@ class PredictiveAnalytics extends React.Component {
         {
           name: "",
           lineColor: "#103FCF",
-          data: [160, 150, 140, 130, 100, 120, 130, 150, 140, 143, 90, 130, 100]
+          data: data1
         },
         {
           name: "",
           lineColor: "#39CC42",
-          data: [ 100, 120, 125, 130, 160, 150, 130, 110, 147, 145, 160, 190, 200 ]
+          data: data2
         }
       ],
       xAxis: [
         {
           type: "category",
-          categories: [ "", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Aug", "Sep", "Oct", "Nov", "Dec", "" ],
+          categories,
           title: {
             text: null
           }
@@ -45,34 +130,87 @@ class PredictiveAnalytics extends React.Component {
       plotOptions: { line: { marker: { enabled: false } } },
       credits: { enabled: false }
     };
-    const barNegativeOptions = {
-      chart: { type: "column", height: "150px", backgroundColor: "#16191B"},
-      title: { text: null },
-      xAxis: { categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Aug", "Sep", "Oct"] },
-      credits: { enabled: false },
-      series: [
-        {
-          name: "Sales",
-          data: [5, 3, 4, 7, 2]
-        },
-        {
-          name: "EBITDA",
-          data: [2, -2, -3, 2, 1]
-        },
-        {
-          name: "EBID",
-          data: [3, 4, 4, -2, 5]
-        }
-      ]
-    };
+    return options
+  }
+  tick = (value)=>{
+    if(value>0){
+      return (
+        <p> <span className="text-success">&#9650;</span>{value} </p>
+      )
+    }else{
+      return (
+        <p> <span className="text-danger">&#9660;</span>{value} </p>
+      )
+    }
+  }
+  render() {
+    const cat = [ "", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Aug", "Sep", "Oct", "Nov", "Dec", "" ]
+    const blue = [160, 150, 140, 130, 100, 120, 130, 150, 140, 143, 90, 130, 100]
+    const green = [ 100, 120, 125, 130, 160, 150, 130, 110, 147, 145, 160, 190, 200 ]
+    const growthSummary = [
+      {
+        name: 'Sales',
+        chart: [30, -50, 90, 60, -20, -20, -50, -30, 90],
+        sum: [64, -158, 64, 64],
+      },
+      {
+        name: 'EBITDA',
+        chart: [30, -50, 90, 60, -20, -20, -50, -30, 90],
+        sum: [10, 72, 10, 10],
+      },
+      {
+        name: 'EBID',
+        chart: [30, -50, 90, 60, -20, -20, -50, -30, 90],
+        sum: [6, -308, 6, 6],
+      },
+      {
+        name: 'Net Income',
+        chart: [30, -50, 90, 60, -20, -20, -50, -30, 90],
+        sum: [-14, -134, -14, -14],
+      },
+      {
+        name: 'EPS (Diluted)',
+        chart: [30, -50, 90, 60, -20, -20, -50, -30, 90],
+        sum: [-6, -76, -6, 6],
+      },
+      {
+        name: 'Speed Metric',
+        chart: [30, -50, 90, 60, -20, -20, -50, -30, 90],
+        sum: [10, -208, 60, 25],
+      },
+    ]
     return (
       <div className="card">
         <div className="card-body">
           <h5 className="card-title">Predictive Analytics</h5>
           <h6>Growth Score</h6>
-          <HighchartsReact highcharts={Highcharts} options={lineOptions} />
+          <HighchartsReact highcharts={Highcharts} options={this.lineOptions(cat, blue, green)} />
           <br />
-          <h6>Growth Summary</h6>
+          <div>
+            <h6>Growth Summary</h6>
+            <div className="scroll-table" style={{ height: 200 }}>
+            <table>
+              <tr>
+                <td width="30%" />
+                <td width="40%" />
+                <td width="10%">1YR</td>
+                <td width="10%">3YR</td>
+                <td width="10%">5YR</td>
+                <td width="10%">10YR</td>
+              </tr>
+              {growthSummary.map((data)=>(
+                <tr>
+                <td>{data.name}</td>
+                <td> <HighchartsReact highcharts={Highcharts} options={this.columnOptions(data.chart)} /> </td>
+                <td> {this.tick(data.sum[0])}</td>
+                <td> {this.tick(data.sum[1])}</td>
+                <td> {this.tick(data.sum[2])}</td>
+                <td> {this.tick(data.sum[3])}</td>
+              </tr>
+              ))}
+            </table>
+            </div>
+          </div>
         </div>
       </div>
     );
