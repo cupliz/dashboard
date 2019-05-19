@@ -18,24 +18,32 @@ class RiskCompositeIndex extends React.Component {
           <h5 className="card-title">Risk Composite Index</h5>
           <Slider {...settings}>
             <div className="slider">
-              <img src="/static/img/icon/apple-watch.png" alt="" />
-              <p>Watch</p>
+              <img src="/static/img/brand/brand-logo-01.png" alt="" />
+              <p>ACMEE</p>
             </div>
             <div className="slider">
-              <img src="/static/img/icon/bowling.png" alt="" />
-              <p>Bowling</p>
+              <img src="/static/img/brand/brand-logo-02.png" alt="" />
+              <p>GLOBEX</p>
             </div>
             <div className="slider">
-              <img src="/static/img/icon/football.png" alt="" />
-              <p>Football</p>
+              <img src="/static/img/brand/brand-logo-03.png" alt="" />
+              <p>SOYLENT</p>
             </div>
             <div className="slider">
-              <img src="/static/img/icon/laptop.png" alt="" />
-              <p>Laptop</p>
+              <img src="/static/img/brand/brand-logo-04.png" alt="" />
+              <p>INITECH</p>
             </div>
             <div className="slider">
-              <img src="/static/img/icon/printer.png" alt="" />
-              <p>Printer</p>
+              <img src="/static/img/brand/brand-logo-05.png" alt="" />
+              <p>UMBRELLA</p>
+            </div>
+            <div className="slider">
+              <img src="/static/img/brand/brand-logo-06.png" alt="" />
+              <p>HOOLI</p>
+            </div>
+            <div className="slider">
+              <img src="/static/img/brand/brand-logo-06.png" alt="" />
+              <p>WEEDS</p>
             </div>
           </Slider>
         </div>
