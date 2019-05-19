@@ -2,7 +2,7 @@
   padding: 0 50px;
 }
 .theme-dark {
-  height: 1024px;
+  height: 1080px;
   background-color: #111316;
   color: #FFFFFF;
   font-family: Arial;
@@ -41,7 +41,6 @@
   color: #FFFFFF !important;
   font-size: 11px;
   border-top: #fff;
-  height: 50px;
 }
 .theme-dark .card .card-text,
 .theme-dark .card .card-body {
@@ -122,4 +121,89 @@
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+.card .card-body .row .col-3 .rounded-pill{
+  height: 10px;
+  width: 70%;
+}
+
+.card .row .col{
+  background-color: rgb(29, 32, 34);
+  margin: 5px
+}
+
+.card .row .p-3{
+  font-size: 14px;
+}
+
+.text-blue{
+  font-size: 13px;
+  font-weight: bold;
+  color: rgb(93, 93, 175)
+}
+
+.text-green{
+  font-size: 13px;
+  font-weight: bold;
+  color: rgb(79, 156, 79)
+}
+
+.text-white{
+  font-size: 15px;
+  font-weight: bold;
+  color: rgb(248, 255, 248)
+}
+
+ .text-purple{
+  font-size: 10px;
+  font-weight: bold;
+  color: purple
+}
+
+.card .card-box{
+  font-size: 10px
+}
+
+.card .card-box .div{
+  margin: 10px
+}
+
+.card .card-body .row .rounded-pill{
+  height: 10px;
+  width: 20px;
+  background-color: blue;
+  margin: 3px;
+  margin-left: 10px;
+}
+
+.table {
+  overflow: scroll;
+}
+
+.private{
+  height: 50%;
+  padding: 5px;
+  background-color: rgb(31, 34, 37);
+  text-justify: auto;
+}
+
+.card .card-body .img {
+  height: 15px;
+}
+
+.scroll-table {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.scroll-table::-webkit-scrollbar {
+  width: 10px;
+}
+.scroll-table::-webkit-scrollbar-track {
+  border-radius: 20px;
+  background-color:  rgba(102, 101, 101, 0.3)
+}
+.scroll-table::-webkit-scrollbar-thumb {
+  background: rgb(110, 110, 110);
+  border-radius: 20px;
 }
