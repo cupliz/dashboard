@@ -19,7 +19,7 @@
   background-color: #15171A !important;
   border: none;
   font-size: 18px;
-  color: #2B2E30;
+  color: #2b2e30;
 }
 .theme-dark .header-title {
   font-size: 16px;
@@ -33,6 +33,12 @@
   background-color: #15181B !important;
   box-shadow: 4px 4px #0C0E10;
   margin: 10px;
+}
+.theme-dark .card-header {
+  border: none;
+  background-color: #15181B !important;
+  margin-top: 10px !important;
+  padding-bottom: 0px;
 }
 .theme-dark .card .card-footer{
   background-color: #191C1F !important;
@@ -50,6 +56,7 @@
   font-weight: bold;
   letter-spacing: 2px;
 }
+
 .card .card-body .row .col-3 .rounded-pill{
   height: 10px;
   width: 70%;
