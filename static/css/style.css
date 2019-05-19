@@ -34,12 +34,6 @@
   box-shadow: 4px 4px #0C0E10;
   margin: 10px;
 }
-.theme-dark .card-header {
-  border: none;
-  background-color: #15181B !important;
-  margin-top: 10px !important;
-  padding-bottom: 0px;
-}
 .theme-dark .card .card-footer{
   background-color: #191C1F !important;
   color: #FFFFFF !important;
@@ -55,6 +49,48 @@
   font-size: 15px;
   font-weight: bold;
   letter-spacing: 2px;
+}
+.theme-dark .card-header {
+  border: none;
+  background-color: #15181B !important;
+  margin-top: 10px !important;
+  padding-bottom: 0px;
+}
+
+/* News */
+.theme-dark .news .card-header .news-box {
+  padding: 5px !important;
+  margin-top: -10px;
+}
+.theme-dark .news .card-header .news-box .box-title {
+  font-size: 11px;
+}
+.theme-dark .news .card-header .news-box .box-content {
+  font-size: 13px;
+  font-weight: 600;
+}
+.theme-dark .news .card-body hr{
+  padding: 0px;
+  background-color:#1F2124;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+.theme-dark .news .card-body{
+  display: block;
+  width: 500px;
+  height: 190px;
+}
+.theme-dark .news .slider img{
+  width: 140px;
+  height: 80px;
+}
+.theme-dark .news .slider span{
+  text-align: justify;
+  font-size: 11px;
+}
+.theme-dark .news .slider p{
+  margin-top: 5px;
+  font-size: 11px;
 }
 
 .card .card-body .row .col-3 .rounded-pill{
