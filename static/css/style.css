@@ -205,7 +205,7 @@ background-color:#16191B;
   padding-left: 0.5vh;
   padding-top: 0.5vh;
 }
-.box-title .card-text {
+.box-title .card-desc {
   font-size: 1.2vh;
   margin: 0 !important;
   padding-left: 0.5vh;
@@ -219,7 +219,7 @@ background-color:#16191B;
   height: 1.5vh;
   margin: 0.5vh;
 }
-.box-title .card-desc {
+.box-title .card-text {
   margin-top: -10vh;
   font-size: 1vh;
   padding-left: 2vh;
@@ -290,15 +290,26 @@ background-color:#16191B;
 .kyc {
   height: 17vh;
 }
+.kyc .col-3 {
+  font-size: 1.2vh;
+  text-align: center;
+}
+.kyc .card-body {
+  margin: 0vh;
+  padding: 0vh;
+}
+.kyc label {
+  margin-top: 1vh;
+}
 .kyc .card-footer{
   height: 5vh;
+  /* padding: 0vh; */
+  margin: 0vh;
+  padding-top: 1vh;
 }
-
-
 .kyc .card-footer p {
   font-size: 1.2vh;
 }
-
 
 /*  */
 .web-analytics {

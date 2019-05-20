@@ -6,24 +6,22 @@ class KYC extends React.Component {
   render() {
     return (
       <div className="card kyc">
+        <div className="card-header">
+          <h5 className="card-title">KYC</h5>
+        </div>
         <div className="card-body">
-          <h5 className="card-title pl-3">KYC</h5>
           <div className="row">
             <div className="col-3">
-              <div className="pb-2 ml-3">Watchlist</div>
-              <div className="rounded-pill bg-success"></div>
+              Watchlist <div><label className="rounded-pill bg-success"></label></div>
             </div>
             <div className="col-3 border-left border-dark ">
-              <div className="pb-2 ml-3">Regulatory</div>
-              <div className="rounded-pill bg-warning"></div>
+              Regulatory <div><label className="rounded-pill bg-warning"></label></div>
             </div>
             <div className="col-3 border-left border-dark">
-              <div className="pb-2 ml-3">Litigation</div>
-              <div className="rounded-pill bg-danger"></div>
+              Litigation <div><label className="rounded-pill bg-danger"></label></div>
             </div>
             <div className="col-3 border-left border-dark">
-              <div className="pb-2 ml-4"> Media</div>
-              <div className="rounded-pill bg-success"></div>
+              Media <div><label className="rounded-pill bg-success"></label></div>
             </div>
           </div>
         </div>

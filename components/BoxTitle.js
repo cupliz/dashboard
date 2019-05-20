@@ -13,7 +13,7 @@ class BoxTitle extends React.Component {
             </div>
             <div className="col-8">
               <h5 className="col bg-transparent card-title">Darktrace</h5>
-              <p className="col bg-transparent card-text">www.darktrace.com</p>
+              <p className="col bg-transparent card-desc">www.darktrace.com</p>
               <div className="row col bg-transparent social">
                   <img src="../static/img/social/facebook.png"/>
                   <img src="../static/img/social/twitter.png"/>
@@ -24,7 +24,8 @@ class BoxTitle extends React.Component {
             <div className="col-2 rounded-pill text-center private">Private</div>
           </div>
         </div>
-        <div className="card-desc">A group of the development $ sale cyber-threat defence technology</div>
+        
+        <div className="card-text">A group of the development $ sale cyber-threat defence technology</div>
         <div className="card-footer">
           <div className="row">
             <div className="col">
