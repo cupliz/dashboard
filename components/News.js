@@ -16,21 +16,21 @@ class News extends React.Component {
       <div className="card news">
         <div className="card-header">
           <div className="row">
-            <div className="col-sm-3 title">News</div>
-            <div className="col-sm-4 news-box">
-              <div className="box-title text-muted">Sector News Sentiment</div>
+            <div className="col-3 title">News</div>
+            <div className="col-4 news-box">
+              <div className="text-muted">Sector News Sentiment</div>
               <div className="box-content">
                 239.60 <span className="text-danger">&#9660;</span>
               </div>
             </div>
-            <div className="col-sm-3 news-box">
-              <div className="box-title text-muted">Stores Today</div>
+            <div className="col-3 news-box">
+              <div className="text-muted">Stores Today</div>
               <div className="box-content">
                 239.60 <span className="text-danger">&#9660;</span>
               </div>
             </div>
-            <div className="col-sm-2 news-box">
-              <div className="box-title text-muted">Coverage</div>
+            <div className="col-2 news-box">
+              <div className="text-muted">Coverage</div>
               <div className="box-content">
                 239.60 <span className="text-danger">&#9660;</span>
               </div>

@@ -183,7 +183,18 @@ class PredictiveAnalytics extends React.Component {
       <div className="card predictive-analytics">
         <div className="card-body">
           <h5 className="card-title">Predictive Analytics</h5>
-          <h6>Growth Score</h6>
+          <div className="row">
+            <div className="col-3">
+              <h6>Growth Score</h6>
+            </div>
+            <div className="col-9">
+              <div className="row text-center">
+                <div className="col-4">High</div>
+                <div className="col-4 border-left border-dark">34.56%<span className="ml-2 tick-down">&#9660;</span></div>
+                <div className="col-4 border-left border-dark">20.56%<span className="ml-2 tick-down">&#9660;</span> </div>
+              </div>
+            </div>
+          </div>
           <HighchartsReact highcharts={Highcharts} options={this.lineOptions(cat, blue, green)} />
           <br />
           <div>

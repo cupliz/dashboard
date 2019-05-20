@@ -8,7 +8,7 @@ class Turnover extends React.Component {
     const options = {
       chart: {
         type: "column",
-        height: '66%',
+        height: '62%',
         backgroundColor: "#16191B"
       },
       credits: {

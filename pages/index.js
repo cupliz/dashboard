@@ -18,19 +18,19 @@ class Index extends React.Component {
     return (
       <div>
         <Header />
-        <div className="dashboard container-fluid">
+        <div className="container-fluid">
           <div className="row no-gutters">
-            <div className="col-sm">
+            <div className="col-4">
               <BoxTitle />
               <FinancialMetrics />
               <Turnover />
             </div>
-            <div className="col-sm">
+            <div className="col-4">
               <KYC />
               <WebAnalytics />
               <CompositeScoring />
             </div>
-            <div className="col-sm">
+            <div className="col-4">
               <News />
               <PredictiveAnalytics />
               <RiskCompositeIndex />

@@ -5,7 +5,7 @@ class WebAnalytics extends React.Component {
 
   render() {
     return (
-      <div className="card">
+      <div className="card web-analytics">
         <div className="card-body">
           <h5 className="card-title">Web Analytics</h5>
           <div>
@@ -18,7 +18,7 @@ class WebAnalytics extends React.Component {
             </p>
             <div className="row m-0 p-0 d-flex">
               <h6>6.7 </h6>
-              <span className="tick-down">&#9660;</span>
+              <span className="ml-2 tick-down">&#9660;</span>
             </div>
           </div>
           <div className="col-4">
@@ -26,7 +26,7 @@ class WebAnalytics extends React.Component {
             </p>
             <div className="row m-0 p-0 d-flex">
               <h6>6.7 </h6>
-              <span className="tick-down">&#9660;</span>
+              <span className="ml-2 tick-down">&#9660;</span>
             </div>
           </div>
           <div className="col-4">
@@ -34,7 +34,7 @@ class WebAnalytics extends React.Component {
             </p>
             <div className="row m-0 p-0 d-flex">
               <h6>2 mins </h6>
-              <span className="tick-down">&#9660;</span>
+              <span className="ml-2 tick-down">&#9660;</span>
             </div>
           </div>
         </div>
