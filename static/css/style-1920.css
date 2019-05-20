@@ -1,9 +1,5 @@
- 
-/* @import url("style-2880.css"); */
-/* @import url("style-1920.css"); */
-/* @import url("style-1280.css"); */
 
-
+@media screen and (max-width: 1920px){
 body {
   height: 95vh;
   background-color: #111316;
@@ -135,9 +131,9 @@ background-color:#16191B;
   overflow: scroll;
 }
 
-/* .card .card-body .img {
+.card .card-body .img {
   height: 15px;
-} */
+}
 
 .scroll-table {
   overflow: scroll;
@@ -184,59 +180,18 @@ background-color:#16191B;
   height: 17vh;
   font-size: 1vh;
 }
-.box-title .logo {
-  display: block;
-  height: 6vh;
-}
-.box-title .col-6{
-  margin-left: 1vh;
-}
+
 .box-title .private {
-  height: 3vh;
-  font-size: 1vh;
+  height: 60%;
+  width: 50%;
+  /* padding: 5px; */
   background-color: #191C24;
   text-justify: auto;
-  padding-top: 0.8vh;
-  margin-left: -2vh;
 }
-.box-title .card-title {
-  font-size: 1.2vh;
-  margin: 0 !important;
-  padding-left: 0.5vh;
-  padding-top: 0.5vh;
+.box-title .card-img-top {
+  display: block;
+  height: 2vh;
 }
-.box-title .card-text {
-  font-size: 1.2vh;
-  margin: 0 !important;
-  padding-left: 0.5vh;
-}
-.box-title .social {
-  font-size: 1.2vh;
-  margin: 0 !important;
-  padding-left: 0vh;
-}
-.box-title .social img{
-  height: 1.5vh;
-  margin: 0.5vh;
-}
-.box-title .card-desc {
-  margin-top: -10vh;
-  font-size: 1vh;
-  padding-left: 2vh;
-  padding-bottom: 0.5vh;
-}
-.box-title .card-footer {
-  height: 5vh;
-}
-.box-title .card-footer .col{
-  font-size: 1vh;
-  background: transparent;
-  padding-left: 1vh;
-  padding-right: 0vh;
-  margin: 0;
-  margin-top: -0.5vh;
-}
-
 
 /*  */
 .financial-metrics {
@@ -428,4 +383,6 @@ tr:not(:last-child) td {
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
+}
+
 }

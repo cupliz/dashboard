@@ -16,7 +16,7 @@ class News extends React.Component {
       <div className="card news">
         <div className="card-header">
           <div className="row">
-            <div className="col-3 title">News</div>
+            <h5 className="col-3 card-title">News</h5>
             <div className="col-4 news-box">
               <div className="text-muted">Sector News Sentiment</div>
               <div className="box-content">

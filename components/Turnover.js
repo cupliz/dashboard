@@ -3,12 +3,23 @@ import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 
 class Turnover extends React.Component {
-  componentDidMount() {}
+  state = {
+    screenHeight: 1920,
+    screenWidth: 1080
+  }
+  async componentDidMount() {
+    if(window.innerHeight && window.innerWidth){
+      await this.setState({
+        screenHeight: window.innerHeight,
+        screenWidth: window.innerWidth,
+      })
+    }
+  }
   stackedColumnOptions = () => {
     const options = {
       chart: {
         type: "column",
-        height: '62%',
+        height: 26/100 * this.state.screenHeight,
         backgroundColor: "transparent"
       },
       credits: {

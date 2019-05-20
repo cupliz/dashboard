@@ -4,7 +4,19 @@ import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 
 class PredictiveAnalytics extends React.Component {
-  componentDidMount() {}
+  state = {
+    screenHeight: 1920,
+    screenWidth: 1080
+  }
+  async componentDidMount() {
+    console.log(window.innerWidth, window.innerHeight)
+    if(window.innerHeight && window.innerWidth){
+      await this.setState({
+        screenHeight: window.innerHeight,
+        screenWidth: window.innerWidth,
+      })
+    }
+  }
   columnOptions = (data) => {
     const options = {
       chart: {
@@ -14,7 +26,7 @@ class PredictiveAnalytics extends React.Component {
         type: "column",
         margin: [2, 0, 2, 0],
         width: 120,
-        height: 20,
+        height: 2/100 * this.state.screenHeight,
         style: {
           overflow: "visible"
         },
@@ -94,7 +106,7 @@ class PredictiveAnalytics extends React.Component {
     const options = {
       title: { text: null },
       chart: {
-        height: "110",
+        height: 10/100 * this.state.screenHeight,
         backgroundColor: "transparent"
       },
       series: [
@@ -184,7 +196,7 @@ class PredictiveAnalytics extends React.Component {
     return (
       <div className="card predictive-analytics">
         <div className="card-body">
-          <h5 className="card-title">Predictive Analytics</h5>
+          <h5 className="card-title"><img src="/static/img/AMPLYFI_white.png"/> &nbsp; Predictive Analytics</h5>
           <div className="row">
             <div className="col-3">
               <h6>Growth Score</h6>

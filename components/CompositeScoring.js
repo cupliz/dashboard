@@ -41,7 +41,7 @@ class CompositeScoring extends React.Component {
               </tr>
               <tr className="border-bottom table-borderless">
                 <td className="text-light pl-0">Executive Team</td>
-                <td ><div className="d-inline-block bg-primary rounded-pill text-center text-light border-0 " style={{ height: 30, width: 50, fontSize: 20, fontWeight: "bold" }}>5.3</div></td>
+                <td ><div className="d-inline-block bg-primary rounded-pill text-center text-light border-0 ">5.3</div></td>
               </tr>
               </tbody>
             </table>
