@@ -35,7 +35,7 @@ export const columnOptions = (data, type, width) => {
             endOnTick: false,
             tickPositions: [],
             lineColor: 'transparent',
-            lineWidth: 1
+            lineWidth: 1,
         },
         yAxis: {
             endOnTick: false,
@@ -138,51 +138,65 @@ export const highchartsOptions = () => {
     const options = {
         chart: {
             type: 'column',
-            // height: "150px",
             backgroundColor: "#16191B"
         },
+        credits: {
+            enabled: false
+        },
+        legend: {
+            enabled: false
+            },
         title: null,
         xAxis: {
-            categories: ['100%', '100%', '100%']
+            categories: ['100%', '100%', '100%'],
+            lineColor: '#16191B',
+            lineWidth: 1,
+            floor: 0,
         },
         yAxis: {
-            categories: ['100%', '100%', '100%']
-        },
-        tooltip: {
-            pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b> ({point.percentage:.0f}%)<br/>',
-            shared: true
+            gridLineColor: '#16191B',
+            labels: {
+                enabled: false
+            },
+            title: {
+                text: null
+            },
+            startOnTick: false,
+            endOnTick: false,
+            tickPositions: [],
+            lineColor: 'transparent',
         },
         plotOptions: {
             column: {
-                stacking: 'percent'
+                stacking: 'percent',
             },
             series: {
                 borderColor: '#16191B',
-                borderWidth:3
+                borderWidth: 2,
+                groupPadding: -0.12,
+                enableMouseTracking: false,
+                stacking: 'percent'
+            },
+            dataLabels: {
+                enabled: false
             }
         },
         series: [{
-            name: "",
-            data: [1, 2, 3],
-            color: "#4f92ff"
+            data: [0.3, 0.4, 0.6],
+            color: "#4f92ff",
         }, {
-            name: 'Jane',
-            data: [2, 2, 3],
+            data: [0.99, 0.99, 0.99],
             color: "red"
         }, {
-            name: 'Joe',
-            data: [2, 2, 2],
+            data: [0.98, 0.98, 0.98],
             color: "blue"
         }, {
-            name: 'Joe',
-            data: [3, 4, 4],
+            data: [6, 4, 3],
             color: "#35fc95"
         }, {
-            name: 'Joe',
-            data: [3, 4, 4],
+            data: [0.9, 1, 0.99],
             color: "#70008c"
-        }
-        ]
+        }]
     }
 
 
