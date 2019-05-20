@@ -17,7 +17,7 @@ class FinancialMetrics extends React.Component {
         chart: [],
       },
       {
-        name: "Turnovor",
+        name: "Turnover",
         year2017: '£30.759.000',
         year2018: "£59.484.000",
         chart: [10, -8, 10, 40, 30],
@@ -54,11 +54,12 @@ class FinancialMetrics extends React.Component {
       }
     ]
     return (
-      <div className="card">
+      <div className="card financial-metrics">
         <div className="card-body">
           <h5 className="card-title">Key Financial Metrics</h5>
-          <div className="scroll-table" style={{ height: 300 }}>
+          <div className="scroll-table" style={{ height: '50%' }}>
             <table className="table">
+              <tbody>
               {growthSummary.map((data, index) => (
                 <tr key={index} className={index == 0 ? "table-borderless" : ""}>
                   <td className="text-light pl-0 pr-5">{data.name}</td>
@@ -72,6 +73,7 @@ class FinancialMetrics extends React.Component {
                   </td>
                 </tr>
               ))}
+              </tbody>
             </table>
           </div>
         </div>

@@ -6,7 +6,7 @@ import HighchartsReact from "highcharts-react-official";
 class PredictiveAnalytics extends React.Component {
   componentDidMount() {}
   columnOptions = (data) => {
-    const defaultOptions = {
+    const options = {
       chart: {
         // renderTo: (options.chart && options.chart.renderTo) || this,
         backgroundColor: null,
@@ -89,7 +89,7 @@ class PredictiveAnalytics extends React.Component {
         }
       }
     };
-    return defaultOptions
+    return options
   }
   lineOptions = (categories, data1, data2) => {
     const options = {
@@ -180,26 +180,29 @@ class PredictiveAnalytics extends React.Component {
       },
     ]
     return (
-      <div className="card">
+      <div className="card predictive-analytics">
         <div className="card-body">
           <h5 className="card-title">Predictive Analytics</h5>
           <h6>Growth Score</h6>
           <HighchartsReact highcharts={Highcharts} options={this.lineOptions(cat, blue, green)} />
           <br />
           <div>
-            <h6>Growth Summary</h6>
             <div className="scroll-table" style={{ height: 200 }}>
             <table>
+              <thead>
               <tr>
-                <td width="30%" />
+                <td width="30%" >
+                <h6 className="mb-3">Growth Summary</h6></td>
                 <td width="40%" />
                 <td width="10%">1YR</td>
                 <td width="10%">3YR</td>
                 <td width="10%">5YR</td>
                 <td width="10%">10YR</td>
               </tr>
-              {growthSummary.map((data)=>(
-                <tr>
+              </thead>
+              <tbody>
+              {growthSummary.map((data, i)=>(
+                <tr key={i}>
                 <td>{data.name}</td>
                 <td> <HighchartsReact highcharts={Highcharts} options={this.columnOptions(data.chart)} /> </td>
                 <td> {this.tick(data.sum[0])}</td>
@@ -208,6 +211,7 @@ class PredictiveAnalytics extends React.Component {
                 <td> {this.tick(data.sum[3])}</td>
               </tr>
               ))}
+              </tbody>
             </table>
             </div>
           </div>

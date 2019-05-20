@@ -16,9 +16,9 @@ class Index extends React.Component {
 
   render() {
     return (
-      <div className="theme-dark">
+      <div>
         <Header />
-        <div className="container-fluid">
+        <div className="dashboard container-fluid">
           <div className="row no-gutters">
             <div className="col-sm">
               <BoxTitle />

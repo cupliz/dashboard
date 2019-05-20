@@ -5,15 +5,16 @@ class CompositeScoring extends React.Component {
 
   render() {
     return (
-      <div className="card">
+      <div className="card composite-scoring">
         <div className="card-body">
           <div className="row d-flex justify-content-between pl-3 pr-4">
             <h5 className="card-title ">Qualitative, Macro & ESG Factors</h5>
             <div className="row"><div className="rounded-pill"></div><div>Composite Scoring</div></div>
           </div>
           <h6 className="text-light mt-2 font-weight-bold">Descriptive</h6>
-          <div className="scroll-table" style={{ height: 300 }}>
+          <div className="scroll-table">
             <table className="table">
+              <tbody>
               <tr >
                 <td className="text-secondary pl-0" >Sector</td>
                 <td className="text-light">Software</td>
@@ -42,6 +43,7 @@ class CompositeScoring extends React.Component {
                 <td className="text-light pl-0">Executive Team</td>
                 <td ><div className="d-inline-block bg-primary rounded-pill text-center text-light border-0 " style={{ height: 30, width: 50, fontSize: 20, fontWeight: "bold" }}>5.3</div></td>
               </tr>
+              </tbody>
             </table>
           </div>
         </div>

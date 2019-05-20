@@ -1,72 +1,149 @@
 import React from "react";
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
-import { highchartsOptions } from './Options'
 
 class Turnover extends React.Component {
-  componentDidMount() { }
+  componentDidMount() {}
+  stackedColumnOptions = () => {
+    const options = {
+      chart: {
+        type: "column",
+        height: '66%',
+        backgroundColor: "#16191B"
+      },
+      credits: {
+        enabled: false
+      },
+      legend: {
+        enabled: false
+      },
+      title: null,
+      xAxis: {
+        categories: ["100%", "100%", "100%"],
+        lineColor: "#16191B",
+        lineWidth: 1,
+        floor: 0
+      },
+      yAxis: {
+        gridLineColor: "#16191B",
+        labels: {
+          enabled: false
+        },
+        title: {
+          text: null
+        },
+        startOnTick: false,
+        endOnTick: false,
+        tickPositions: [],
+        lineColor: "transparent"
+      },
+      plotOptions: {
+        column: {
+          stacking: "percent"
+        },
+        series: {
+          borderColor: "#16191B",
+          borderWidth: 2,
+          groupPadding: -0.12,
+          enableMouseTracking: false,
+          stacking: "percent"
+        },
+        dataLabels: {
+          enabled: false
+        }
+      },
+      series: [
+        {
+          data: [0.3, 0.4, 0.6],
+          color: "#4f92ff"
+        },
+        {
+          data: [0.99, 0.99, 0.99],
+          color: "red"
+        },
+        {
+          data: [0.98, 0.98, 0.98],
+          color: "blue"
+        },
+        {
+          data: [6, 4, 3],
+          color: "#35fc95"
+        },
+        {
+          data: [0.9, 1, 0.99],
+          color: "#70008c"
+        }
+      ]
+    };
 
+    return options;
+  };
   render() {
     return (
-      <div className="card">
+      <div className="card turnover">
         <div className="card-body">
-          <h5 className="card-title">Share of Aggregate Annual Peer Group Turnover</h5>
-          <div className="row col-12 mb-4">
-
-            <div className="col-4">
+          <h5 className="card-title">
+            Share of Aggregate Annual Peer Group Turnover
+          </h5>
+          <div className="row mb-4">
+            <div className="col-4 ml-4">
               <div className="row mb-2">
-                <div className="colorCategory mt-1 mt-1 DarkTrace"></div>
+                <div className="mt-1 DarkTrace" />
                 <div className="ml-2">Dark Trace</div>
               </div>
               <div className="row">
-                <div className="colorCategory mt-1 FireEye"></div>
+                <div className="mt-1 FireEye" />
                 <div className="ml-2">FireEye</div>
               </div>
             </div>
+            
             <div className="col-3">
               <div className="row">
-                <div className="colorCategory mt-1 ForeScout"></div>
+                <div className="mt-1 ForeScout" />
                 <div className="ml-2">Fore Scout</div>
               </div>
-              <div className="row ">
-                <div className="colorCategory mt-1 CyberArk"></div>
+              <div className="row">
+                <div className="mt-1 CyberArk" />
                 <div className="ml-2">CyberArk</div>
               </div>
             </div>
 
-            <div className="col-3 row mb-2">
-              <div className="colorCategory mt-1 Rapi"></div>
-              <div className="ml-2">Rapi 7</div>
+            <div className="col-3">
+              <div className="row">
+                <div className="mt-1 Rapi" />
+                <div className="ml-2">Rapi 7</div>
+              </div>
             </div>
           </div>
-          <div className="row ml-2">
-            <div className="col-3 pl-5 border-secondary border-bottom mr-1 text-center">
+
+          <div className="row text-center">
+            <div className="col-3 border-secondary">
               <div className="">2016</div>
               <div className="pb-2">£977.723.070</div>
             </div>
-            <div className="col-3 pl-5 text-center border-secondary border-bottom">
-            <div className="">2017</div>
+            <div className="col-3 border-secondary">
+              <div className="">2017</div>
               <div className="pb-2">£1.160.112.610</div>
             </div>
-            <div className="col-3 pl-5 text-center border-secondary border-bottom ml-1">
-            <div className="">2018</div>
-              <div className="pb-2">£1.380.650.000</div>
+            <div className="col-3 border-secondary">
+              <div>2018 <br/> £1.380.650.000</div>
             </div>
-            <div className="col-2 ml-4 pt-3 text-center">Difference</div>
+            <div className="col-3">Difference</div>
           </div>
+          
           <div className="row pr-3 mt-0 pt-0">
-            <div className="col-10 m-0 pt-0">
-                <HighchartsReact
-                  highcharts={Highcharts}
-                  options={highchartsOptions()}
-                />
+            <div className="col-10">
+              <HighchartsReact
+                highcharts={Highcharts}
+                options={this.stackedColumnOptions()}
+              />
             </div>
             <div className="col-2 presentation">
-              <div  className="pt-2">14.7%</div>
-              <div className="mt-4 mb-2">25.8%</div>
-              <div className="mt-5 ">9.8%</div>
-              <div className="mt-5 pt-5">-16.7%</div>
-              <div className="mt-5 pt-4">12.2%</div>
+              <div className="pt-1">14.7%</div>
+              <div className="pt-2">25.8%</div>
+              <div className="pt-3">9.8%</div>
+              <div className="pt-5">-16.7%</div>
+              <div className="pt-5">12.2%</div>
             </div>
           </div>
         </div>
@@ -74,4 +151,4 @@ class Turnover extends React.Component {
     );
   }
 }
-export default Turnover
+export default Turnover;

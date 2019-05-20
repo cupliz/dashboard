@@ -5,7 +5,7 @@ class BoxTitle extends React.Component {
 
   render() {
     return (
-      <div className="card">
+      <div className="card box-title">
         <div className="card-body row pr-4">
           <div className=" col-lg-3 col-xl-2 col-12 col-md-3 bg-transparent mt-1">
             <img src="../static/img/imageDarktrace.jpeg " className="card-img-top rounded m-0" />
@@ -23,7 +23,7 @@ class BoxTitle extends React.Component {
           <h6 className="col-12 col-sm-12 col-lg-3 col-xl-3 rounded-pill text-center private" >Private</h6>
         </div>
         <div className="card-text m-2 ml-4">A group of the development $ sale cyber-threat defence technology</div>
-        <div className="card-footer ">
+        <div className="card-footer">
           <div className="row">
             <div className="col bg-transparent">
               <div className="text-secondary">Headquarters:</div>

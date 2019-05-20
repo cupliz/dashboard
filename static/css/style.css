@@ -1,129 +1,73 @@
-.container-fluid{
-  padding: 0 50px;
-}
+
 body {
   height: 95vh;
   background-color: #111316;
   font-family: Arial;
-}
-.theme-dark {
   color: #FFFFFF;
 }
-.theme-dark .header-search {
-  background-color: #171A1D;
-  height: 50px !important;
+.dashboard{
+  height: 100vh;
 }
-.theme-dark .header-search input{
+.container-fluid{
+  padding: 0 50px;
+}
+.header-search {
+  background-color: #171A1D;
+  height: 5.8vh !important;
+}
+.header-search input{
   float: right;
   clear: both;
   margin: 0 10px;
-  height: 50px !important;
-  width: 20%;
+  height: 5vh !important;
+  width: 20vw;
   padding: 0 20px;
   background-color: #15171A !important;
   border: none;
   font-size: 18px;
   color: #2b2e30;
 }
-.theme-dark .header-title {
-  font-size: 16px;
+.header-title {
+  font-size: 1.6vh;
   letter-spacing: 8px;
   font-weight: 700;
-  margin-top: 28px;
-  margin-bottom: 5px;
-  padding: 0 10px;
+  margin-top: 2.4vh;
+  padding: 0 1vw;
 }
-.theme-dark .card {
+
+.card {
   background-color: #15181B !important;
   box-shadow: 4px 4px #0C0E10;
-  margin: 10px;
+  margin: 1.5vh 1vh;
 }
-.theme-dark .card .card-footer{
+.card .card-footer{
   background-color: #191C1F !important;
   color: #FFFFFF !important;
   font-size: 11px;
   border-top: #fff;
 }
-.theme-dark .card .card-text,
-.theme-dark .card .card-body {
+.card .card-text,
+.card .card-body {
   font-size: 12px;
   letter-spacing: 1px;
 }
-.theme-dark .card .card-title{
-  font-size: 15px;
+.card .card-title{
+  font-size: 1.5vh;
   font-weight: bold;
   letter-spacing: 2px;
 }
-.theme-dark .card-header {
+.card-header {
   border: none;
   background-color: #15181B !important;
   margin-top: 10px !important;
   padding-bottom: 0px;
 }
 
-/* News */
-.theme-dark .news .card-header .news-box {
-  padding: 5px !important;
-  margin-top: -10px;
-}
-.theme-dark .news .card-header .news-box .box-title {
-  font-size: 11px;
-}
-.theme-dark .news .card-header .news-box .box-content {
-  font-size: 13px;
-  font-weight: 600;
-}
-.theme-dark .news .card-body hr{
-  padding: 0px;
-  background-color:#1F2124;
-  margin-top: -10px;
-  margin-bottom: 10px;
-}
-.theme-dark .news .card-body{
-  display: block;
-  width: 590px;
-  height: 190px;
-  padding: 0 20px;
-}
-.theme-dark .news .slider img{
-  width: 175px;
-  height: 80px;
-}
-.theme-dark .news .slider span{
-  text-align: justify;
-  font-size: 11px;
-}
-.theme-dark .news .slider p{
-  margin-top: 5px;
-  font-size: 11px;
-}
-
-/* .theme-dark .highcharts-background{
+/* .highcharts-background{
   background-color:#16191B;
 } */
 
-.theme-dark .kyc .card-footer span{
-  font-size: 13px;
-}
 
-/* RCI */
-.theme-dark .rci .card-body{
-  display: block;
-  width: 590px;
-}
-.theme-dark .rci .slider{
-  text-align: center;
-}
-.theme-dark .rci .slider img{
-  width: 60px;
-  margin-left: 40px;
-}
-.theme-dark .rci .slider p{
-  margin-top: 10px;
-  font-size: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
 
 .card .card-body .row .col-3 .rounded-pill{
   height: 10px;
@@ -183,13 +127,6 @@ body {
   overflow: scroll;
 }
 
-.private{
-  height: 50%;
-  padding: 5px;
-  background-color: rgb(31, 34, 37);
-  text-justify: auto;
-}
-
 .card .card-body .img {
   height: 15px;
 }
@@ -199,7 +136,7 @@ body {
   overflow-x: hidden;
 }
 .scroll-table::-webkit-scrollbar {
-  width: 10px;
+  width: 0.8vh;
 }
 .scroll-table::-webkit-scrollbar-track {
   border-radius: 20px;
@@ -229,35 +166,146 @@ body {
   font-size: 13px;
 }
 
-.DarkTrace{
+
+/* card styling */
+.box-title{
+  height: 16.5%;
+}
+.box-title .private{
+  height: 60%;
+  width: 50%;
+  /* padding: 5px; */
+  background-color: #191C24;
+  text-justify: auto;
+}
+
+.kyc{
+  height: 16.5%;
+}
+.kyc .card-footer span{
+  font-size: 13px;
+}
+
+.financial-metrics{
+  height: 24%;
+}
+
+/* Turnover */
+.turnover{
+  height: 40%;
+}
+.turnover .DarkTrace{
   background-color: #4f92ff;
-  width: 28px;
-  height: 10px;
-  border-radius: 10px;
+  width: 2.7vh;
+  height: 0.8vh;
+  border-radius: 1vh;
 }
-
-.FireEye{
+.turnover .FireEye{
   background-color:  #35fc95;
-  width: 28px;
-  height: 10px;
-  border-radius: 10px;
+  width: 2.7vh;
+  height: 0.8vh;
+  border-radius: 1vh;
+}
+.turnover .ForeScout{
+  background-color: red;
+  width: 2.7vh;
+  height: 0.8vh;
+  border-radius: 1vh;
+}
+.turnover .CyberArk{
+  background-color: #70008c;
+  width: 2.7vh;
+  height: 0.8vh;
+  border-radius: 1vh;
+}
+.turnover .Rapi{
+  background-color:blue;
+  width: 2.7vh;
+  height: 0.8vh;
+  border-radius: 1vh;
 }
 
-.ForeScout{
-  background-color: red;
-  width: 28px;
-  height: 10px;
-  border-radius: 10px;
+/*  */
+.composite-scoring{
+  height: 30%;
 }
-.CyberArk{
-  background-color: #70008c;
-  width: 28px;
-  height: 10px;
-  border-radius: 10px;
+.composite-scoring .scroll-table{
+  height: 60%;
 }
-.Rapi{
-  background-color:blue;
-  width: 28px;
-  height: 10px;
-  border-radius: 10px;
+
+
+/* News */
+.news {
+  height: 24%;
+}
+.news .card-header .news-box {
+  padding: 0.5vh !important;
+  margin-top: -10px;
+}
+.news .card-header .box-title {
+  font-size: 1.1vh;
+}
+.news .box-content {
+  padding-top: 0.6vh;
+  font-size: 1.3vh;
+  /* font-weight: 600; */
+}
+.news .card-body hr{
+  padding: 0px;
+  background-color:#1F2124;
+  /* margin-top: -10px; */
+  /* margin-bottom: 10px; */
+}
+.news .card-body{
+  display: block;
+  width: 590px;
+  height: 20vh;
+  padding: 0 20px;
+}
+.news .slider img{
+  width: 175px;
+  height: 80px;
+}
+.news .slider span{
+  text-align: justify;
+  font-size: 11px;
+}
+.news .slider p{
+  margin-top: 5px;
+  font-size: 11px;
+}
+
+
+/* Predictive Analyticcs */
+.predictive-analytics{
+  height: 40%;
+}
+.predictive-analytics h6{
+  font-size: 1.3vh;
+  font-weight: 500;
+}
+.predictive-analytics td{
+  font-size: 1vh;
+}
+
+/* RCI */
+.rci {
+  height: 14%;
+}
+.rci .card-body{
+  display: block;
+  width: 590px;
+}
+.rci .slider{
+  text-align: center;
+}
+.rci .slider img{
+  width: 60px;
+  margin-left: 40px;
+}
+.rci .slider p{
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
 }
