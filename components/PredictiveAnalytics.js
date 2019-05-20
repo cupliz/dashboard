@@ -9,7 +9,7 @@ class PredictiveAnalytics extends React.Component {
     const options = {
       chart: {
         // renderTo: (options.chart && options.chart.renderTo) || this,
-        backgroundColor: null,
+        backgroundColor: 'transparent',
         borderWidth: 0,
         type: "column",
         margin: [2, 0, 2, 0],
@@ -18,7 +18,6 @@ class PredictiveAnalytics extends React.Component {
         style: {
           overflow: "visible"
         },
-        // small optimalization, saves 1-2 ms each sparkline
         skipClone: true
       },
       title: {
@@ -95,8 +94,8 @@ class PredictiveAnalytics extends React.Component {
     const options = {
       title: { text: null },
       chart: {
-        height: "150px",
-        backgroundColor: "#16191B"
+        height: "110",
+        backgroundColor: "transparent"
       },
       series: [
         {
@@ -110,6 +109,9 @@ class PredictiveAnalytics extends React.Component {
           data: data2
         }
       ],
+      legend: {
+        enabled: false
+      },
       xAxis: [
         {
           type: "category",
@@ -198,17 +200,17 @@ class PredictiveAnalytics extends React.Component {
           <HighchartsReact highcharts={Highcharts} options={this.lineOptions(cat, blue, green)} />
           <br />
           <div>
-            <div className="scroll-table" style={{ height: 200 }}>
+            <h6 className="mb-3">Growth Summary</h6>
+            <div className="scroll-table">
             <table>
               <thead>
               <tr>
-                <td width="30%" >
-                <h6 className="mb-3">Growth Summary</h6></td>
-                <td width="40%" />
-                <td width="10%">1YR</td>
-                <td width="10%">3YR</td>
-                <td width="10%">5YR</td>
-                <td width="10%">10YR</td>
+                <td width="30%" > </td>
+                <td width="30%" />
+                <td width="15%">1YR</td>
+                <td width="15%">3YR</td>
+                <td width="15%">5YR</td>
+                <td width="15%">10YR</td>
               </tr>
               </thead>
               <tbody>

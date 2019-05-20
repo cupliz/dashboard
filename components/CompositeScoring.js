@@ -11,7 +11,7 @@ class CompositeScoring extends React.Component {
             <h5 className="card-title ">Qualitative, Macro & ESG Factors</h5>
             <div className="row"><div className="rounded-pill mr-2"></div>Composite Scoring</div>
           </div>
-          <h6 className="text-light mt-2 font-weight-bold">Descriptive</h6>
+          <h6 >Descriptive</h6>
           <div className="scroll-table">
             <table className="table">
               <tbody>

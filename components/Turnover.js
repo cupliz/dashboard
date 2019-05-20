@@ -9,7 +9,7 @@ class Turnover extends React.Component {
       chart: {
         type: "column",
         height: '62%',
-        backgroundColor: "#16191B"
+        backgroundColor: "transparent"
       },
       credits: {
         enabled: false
@@ -55,23 +55,23 @@ class Turnover extends React.Component {
       series: [
         {
           data: [0.3, 0.4, 0.6],
-          color: "#4f92ff"
+          color: "#3275BE"
         },
         {
           data: [0.99, 0.99, 0.99],
-          color: "red"
+          color: "#A33236"
         },
         {
           data: [0.98, 0.98, 0.98],
-          color: "blue"
+          color: "#2922C9"
         },
         {
           data: [6, 4, 3],
-          color: "#35fc95"
+          color: "#15A47C"
         },
         {
           data: [0.9, 1, 0.99],
-          color: "#70008c"
+          color: "#4C1B85"
         }
       ]
     };
@@ -110,25 +110,23 @@ class Turnover extends React.Component {
 
             <div className="col-3">
               <div className="row">
-                <div className="mt-1 Rapi" />
-                <div className="ml-2">Rapi 7</div>
+                <div className="mt-1 Rapid7" />
+                <div className="ml-2">Rapid 7</div>
               </div>
             </div>
           </div>
 
-          <div className="row text-center">
+          <div className="row">
             <div className="col-3 border-secondary">
-              <div className="">2016</div>
-              <div className="pb-2">£977.723.070</div>
+              <div className="text-center">2016 <br/>£977.723.070</div>
             </div>
             <div className="col-3 border-secondary">
-              <div className="">2017</div>
-              <div className="pb-2">£1.160.112.610</div>
+              <div className="text-center">2017 <br/>£1.160.112.610</div>
             </div>
             <div className="col-3 border-secondary">
-              <div>2018 <br/> £1.380.650.000</div>
+              <div className="text-center">2018 <br/>£1.380.650.000</div>
             </div>
-            <div className="col-3">Difference</div>
+            <div className="col-3 text-center">Difference</div>
           </div>
           
           <div className="row pr-3 mt-0 pt-0">
