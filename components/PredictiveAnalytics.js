@@ -198,14 +198,14 @@ class PredictiveAnalytics extends React.Component {
         <div className="card-body">
           <h5 className="card-title"><img src="/static/img/AMPLYFI_white.png"/> &nbsp; Predictive Analytics</h5>
           <div className="row">
-            <div className="col-3">
+            <div className="col-4">
               <h6>Growth Score</h6>
             </div>
-            <div className="col-9">
+            <div className="col-8">
               <div className="row text-center">
-                <div className="col-4">High</div>
-                <div className="col-4 border-left border-dark">34.56%<span className="ml-2 tick-down">&#9660;</span></div>
-                <div className="col-4 border-left border-dark">20.56%<span className="ml-2 tick-down">&#9660;</span> </div>
+                <div className="col-4"><label>High</label></div>
+                <div className="col-4 border-left border-dark"><label>34.56%</label><span className="ml-2 tick-down">&#9660;</span></div>
+                <div className="col-4 border-left border-dark"><label>20.56%</label><span className="ml-2 tick-down">&#9660;</span> </div>
               </div>
             </div>
           </div>

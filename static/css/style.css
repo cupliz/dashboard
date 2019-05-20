@@ -84,45 +84,6 @@ background-color:#16191B;
 } */
 
 
-
-.card .card-body .row .col-3 .rounded-pill {
-  height: 10px;
-  width: 70%;
-}
-
-.card .row .col {
-  background-color: rgb(29, 32, 34);
-  margin: 5px
-}
-
-.card .row .p-3 {
-  font-size: 14px;
-}
-
-.text-blue {
-  font-size: 13px;
-  font-weight: bold;
-  color: rgb(93, 93, 175)
-}
-
-.text-green {
-  font-size: 13px;
-  font-weight: bold;
-  color: rgb(79, 156, 79)
-}
-
-.text-white {
-  font-size: 15px;
-  font-weight: bold;
-  color: rgb(248, 255, 248)
-}
-
-.text-purple {
-  font-size: 10px;
-  font-weight: bold;
-  color: purple
-}
-
 .card .card-box {
   font-size: 10px
 }
@@ -160,12 +121,14 @@ background-color:#16191B;
 
 .tick-down {
   color: #C11B12 !important;
-  font-size: 80%;
+  font-size: 1vh;
+  padding-top: 0.3vh;
 }
 
 .tick-up {
   color: #3BD445;
-  font-size: 90%;
+  font-size: 1vh;
+  padding-top: 0.3vh;
 }
 
 .presentation {
@@ -315,6 +278,57 @@ background-color:#16191B;
 .web-analytics {
   height: 32vh;
 }
+.web-analytics .card-body {
+  margin: 0;
+  padding-top: 1vh;
+  font-size: 1vh;
+}
+.web-analytics .pl-4{
+  padding-left: 4vh;
+}
+.web-analytics  .pr-3{
+  padding-left: 3vh;
+}
+.web-analytics .text-secondary{
+  padding-top: 1vh;
+  font-size: 1.2vh;
+}
+.web-analytics h6{
+  font-size: 1.5vh;
+}
+.web-analytics .inner-box{
+  font-size: 1vh;
+}
+.web-analytics .inner-box h4{
+  font-size: 1vh;
+  margin: 2vh 0;
+}
+.web-analytics .inner-box .col {
+  background-color: rgb(29, 32, 34);
+  margin: 1vh;
+  padding: 0;
+  padding-top: 2vh;
+  height: 17vh;
+}
+.web-analytics .text-blue {
+  font-size: 1vh;
+  font-weight: bold;
+  color: rgb(93, 93, 175)
+}
+.web-analytics .text-green {
+  font-size: 1vh;
+  color: rgb(79, 156, 79)
+}
+.web-analytics .text-white {
+  font-size: 1.2vh;
+  color: rgb(248, 255, 248)
+}
+.web-analytics .text-purple {
+  font-size: 0.7vh;
+  color: purple
+}
+
+
 
 /*  */
 .composite-scoring {
@@ -414,6 +428,9 @@ tr:not(:last-child) td {
 .predictive-analytics .card-title img{
   height: 2vh;
   margin-top: -1.2vh;
+}
+.predictive-analytics label {
+  font-size: 1vh;
 }
 
 /* RCI */
