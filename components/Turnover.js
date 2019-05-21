@@ -15,11 +15,11 @@ class Turnover extends React.Component {
       })
     }
   }
-  stackedColumnOptions = () => {
+  stackedColumnOptions = (series, categories) => {
     const options = {
       chart: {
         type: "column",
-        height: 26/100 * this.state.screenHeight,
+        height: this.state.screenHeight/4,
         backgroundColor: "transparent"
       },
       credits: {
@@ -30,7 +30,7 @@ class Turnover extends React.Component {
       },
       title: null,
       xAxis: {
-        categories: ["100%", "100%", "100%"],
+        categories,
         lineColor: "#16191B",
         lineWidth: 1,
         floor: 0
@@ -50,11 +50,23 @@ class Turnover extends React.Component {
       },
       plotOptions: {
         column: {
-          stacking: "percent"
+          stacking: "percent",
+          dataLabels: {
+              enabled: true,
+              color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
+              style: {
+                  textShadow: 'none',
+                  fontSize: '1vh'
+              },
+              formatter: function() {
+                  // numberFormat takes your label's value and the decimal places to show
+                  return Highcharts.numberFormat(this.y, 2) + '%';
+              },
+          }
         },
         series: {
           borderColor: "#16191B",
-          borderWidth: 2,
+          borderWidth: 0,
           groupPadding: -0.12,
           enableMouseTracking: false,
           stacking: "percent"
@@ -63,96 +75,121 @@ class Turnover extends React.Component {
           enabled: false
         }
       },
-      series: [
-        {
-          data: [0.3, 0.4, 0.6],
-          color: "#3275BE"
-        },
-        {
-          data: [0.99, 0.99, 0.99],
-          color: "#A33236"
-        },
-        {
-          data: [0.98, 0.98, 0.98],
-          color: "#2922C9"
-        },
-        {
-          data: [6, 4, 3],
-          color: "#15A47C"
-        },
-        {
-          data: [0.9, 1, 0.99],
-          color: "#4C1B85"
-        }
-      ]
+      series
     };
 
     return options;
   };
+  difference = () => {
+
+  }
   render() {
+    const series1 = [
+      {
+        data: [1.7, 2.7, 4.3],
+        color: "#3275BE"
+      },
+      {
+        data: [13.2, 14.9, 16.6],
+        color: "#A33236"
+      },
+      {
+        data: [12.4, 13.3, 13.6],
+        color: "#2922C9"
+      },
+      {
+        data: [55.6, 51.7, 46.7],
+        color: "#15A47C"
+      },
+      {
+        data: [17.1, 17.4, 19.1],
+        color: "#4C1B85"
+      }
+    ]
+    const series1Categories = ["100%", "100%", "100%"]
+    const series2 = [
+      {
+        data: [4.3],
+        color: "#1e2022",
+      },
+      {
+        data: [16.6],
+        color: "#1e2022"
+      },
+      {
+        data: [13.6],
+        color: "#1e2022"
+      },
+      {
+        data: [46.7],
+        color: "#1e2022"
+      },
+      {
+        data: [19.1],
+        color: "#1e2022"
+      }
+    ]
     return (
       <div className="card turnover">
+        <div className="card-header">
+          <h5 className="card-title"> Share of Aggregate Annual Peer Group Turnover </h5>
+        </div>
         <div className="card-body">
-          <h5 className="card-title">
-            Share of Aggregate Annual Peer Group Turnover
-          </h5>
           <div className="row mb-4">
             <div className="col-4 ml-4">
               <div className="row mb-2">
-                <div className="mt-1 DarkTrace" />
-                <div className="ml-2">Dark Trace</div>
+                <div className="DarkTrace" />
+                <label>Dark Trace</label>
               </div>
               <div className="row">
-                <div className="mt-1 FireEye" />
-                <div className="ml-2">FireEye</div>
+                <div className="FireEye" />
+                <label>FireEye</label>
               </div>
             </div>
             
             <div className="col-3">
               <div className="row">
-                <div className="mt-1 ForeScout" />
-                <div className="ml-2">Fore Scout</div>
+                <div className="ForeScout" />
+                <label>Fore Scout</label>
               </div>
               <div className="row">
-                <div className="mt-1 CyberArk" />
-                <div className="ml-2">CyberArk</div>
+                <div className="CyberArk" />
+                <label>CyberArk</label>
               </div>
             </div>
 
             <div className="col-3">
               <div className="row">
-                <div className="mt-1 Rapid7" />
-                <div className="ml-2">Rapid 7</div>
+                <div className="Rapid7" />
+                <label>Rapid 7</label>
               </div>
             </div>
           </div>
 
           <div className="row">
-            <div className="col-3 border-secondary">
-              <div className="text-center">2016 <br/>£977.723.070</div>
+            <div className="col-10">
+              <div className="row">
+                <div className="col-4 border-secondary">
+                  <div className="text-center">2016 <br/>£977.723.070</div>
+                </div>
+                <div className="col-4 border-secondary">
+                  <div className="text-center">2017 <br/>£1.160.112.610</div>
+                </div>
+                <div className="col-4 border-secondary">
+                  <div className="text-center">2018 <br/>£1.380.650.000</div>
+                </div>
+              </div>
+              
             </div>
-            <div className="col-3 border-secondary">
-              <div className="text-center">2017 <br/>£1.160.112.610</div>
-            </div>
-            <div className="col-3 border-secondary">
-              <div className="text-center">2018 <br/>£1.380.650.000</div>
-            </div>
-            <div className="col-3 text-center">Difference</div>
+            <div className="col-2 border-secondary text-center">Difference</div>
           </div>
           
-          <div className="row pr-3 mt-0 pt-0">
+          <div className="row mt-0 pt-0">
             <div className="col-10">
-              <HighchartsReact
-                highcharts={Highcharts}
-                options={this.stackedColumnOptions()}
-              />
+              <HighchartsReact highcharts={Highcharts} options={this.stackedColumnOptions(series1,series1Categories)} />
             </div>
             <div className="col-2 presentation">
-              <div className="pt-1">14.7%</div>
-              <div className="pt-2">25.8%</div>
-              <div className="pt-3">9.8%</div>
-              <div className="pt-5">-16.7%</div>
-              <div className="pt-5">12.2%</div>
+              <HighchartsReact highcharts={Highcharts} options={this.stackedColumnOptions(series2,null)} />
             </div>
           </div>
         </div>

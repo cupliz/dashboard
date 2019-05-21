@@ -131,16 +131,6 @@ background-color:#16191B;
   padding-top: 0.3vh;
 }
 
-.presentation {
-  background-color: #1e2022;
-  border-width: 0;
-  margin-bottom: 34px;
-  margin-top: 10px;
-  text-align: center;
-  font-weight: 900;
-  font-size: 13px;
-}
-
 
 /* card styling */
 .box-title {
@@ -213,40 +203,59 @@ background-color:#16191B;
 .turnover {
   height: 41vh;
 }
-
+.turnover label{
+  font-size: 1vh;
+  margin: 0;
+  padding: 0
+}
 .turnover .DarkTrace {
   background-color: #3275BE;
   width: 2.7vh;
   height: 0.8vh;
   border-radius: 1vh;
+  margin-top: 0.2vh;
+  margin-right: 0.5vh;
 }
-
 .turnover .FireEye {
   background-color: #15A47C;
   width: 2.7vh;
   height: 0.8vh;
   border-radius: 1vh;
+  margin-top: 0.2vh;
+  margin-right: 0.5vh;
 }
-
 .turnover .ForeScout {
   background-color: #A33236;
   width: 2.7vh;
   height: 0.8vh;
   border-radius: 1vh;
+  margin-top: 0.2vh;
+  margin-right: 0.5vh;
 }
-
 .turnover .CyberArk {
   background-color: #4C1B85;
   width: 2.7vh;
   height: 0.8vh;
   border-radius: 1vh;
+  margin-top: 0.2vh;
+  margin-right: 0.5vh;
 }
-
 .turnover .Rapid7 {
   background-color: #2922C9;
   width: 2.7vh;
   height: 0.8vh;
   border-radius: 1vh;
+  margin-top: 0.2vh;
+  margin-right: 0.5vh;
+}
+.turnover .border-secondary{
+  font-size: 1vh;
+  margin: 0;
+  padding: 0
+}
+.turnover .presentation {
+  /* background-color: #1e2022; */
+  padding: 0vh;
 }
 
 /*  */
@@ -351,12 +360,16 @@ tr:not(:last-child) td {
   border-bottom: 1px solid rgba(102, 101, 101, 0.3);
 }
 
-.composite-scoring  .card-body .row .rounded-pill {
-  height: 10px;
-  width: 20px;
+.composite-scoring .card-header .row {
+
+  font-size: 1vh;
+}
+.composite-scoring  .card-header .rounded-pill {
+  height: 0.8vh;
+  width: 2vh;
   background-color: #0F48FF;
-  margin: 3px;
-  margin-left: 10px;
+  margin: 0.3vh;
+  margin-left: 1vh;
 }
 
 

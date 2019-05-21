@@ -6,10 +6,12 @@ class CompositeScoring extends React.Component {
   render() {
     return (
       <div className="card composite-scoring">
+        <div className="card-header">
+        <h5 className="card-title ">Qualitative, Macro & ESG Factors</h5>
+        <div className="row pull-right"><div className="rounded-pill"></div>Composite Scoring</div>
+        </div>
         <div className="card-body">
           <div className="row d-flex justify-content-between pl-3 pr-4">
-            <h5 className="card-title ">Qualitative, Macro & ESG Factors</h5>
-            <div className="row"><div className="rounded-pill mr-2"></div>Composite Scoring</div>
           </div>
           <h6 >Descriptive</h6>
           <div className="scroll-table">
