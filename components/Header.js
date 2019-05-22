@@ -14,6 +14,7 @@ class Header extends React.Component {
         <div className="header-title">
           <div className="container-fluid">
             <span>OVERVIEW</span>
+            <span className="float-right text-muted">POWERED BY <img src="/static/img/AMPLYFI_white.png"/></span>
           </div>
         </div>
       </div>

@@ -9,24 +9,26 @@ class PredictiveAnalytics extends React.Component {
     screenWidth: 1080
   }
   async componentDidMount() {
-    console.log(window.innerWidth, window.innerHeight)
-    if(window.innerHeight && window.innerWidth){
-      await this.setState({
-        screenHeight: window.innerHeight,
-        screenWidth: window.innerWidth,
-      })
-    }
+    window.addEventListener("resize", this.updateDimensions);
+    this.updateDimensions()
+  }
+  componentWillUnmount = () => {
+    window.removeEventListener("resize", this.updateDimensions);
+  }
+  updateDimensions = () => {
+    const screenWidth = window.innerWidth
+    const screenHeight = window.innerHeight
+      this.setState({screenWidth, screenHeight});
   }
   columnOptions = (data) => {
     const options = {
       chart: {
-        // renderTo: (options.chart && options.chart.renderTo) || this,
         backgroundColor: 'transparent',
         borderWidth: 0,
         type: "column",
         margin: [2, 0, 2, 0],
         width: 120,
-        height: 2/100 * this.state.screenHeight,
+        height: 0.02 * this.state.screenHeight,
         style: {
           overflow: "visible"
         },
@@ -106,7 +108,8 @@ class PredictiveAnalytics extends React.Component {
     const options = {
       title: { text: null },
       chart: {
-        height: 10/100 * this.state.screenHeight,
+        height: this.state.screenHeight/10,
+        width: this.state.screenWidth/3.5,
         backgroundColor: "transparent"
       },
       series: [
@@ -130,6 +133,11 @@ class PredictiveAnalytics extends React.Component {
           categories,
           title: {
             text: null
+          },
+          labels: {
+            style: {
+              fontSize: this.state.screenWidth/250
+            }
           }
         }
       ],
@@ -139,6 +147,11 @@ class PredictiveAnalytics extends React.Component {
         min: 0,
         title: {
           text: null
+        },
+        labels: {
+          style: {
+            fontSize: this.state.screenWidth/250
+          }
         }
       },
       plotOptions: { line: { marker: { enabled: false } } },
@@ -197,7 +210,7 @@ class PredictiveAnalytics extends React.Component {
       <div className="card predictive-analytics">
         <div className="card-body">
           <h5 className="card-title"><img src="/static/img/AMPLYFI_white.png"/> &nbsp; Predictive Analytics</h5>
-          <div className="row">
+          <div className="row growth-score">
             <div className="col-4">
               <h6>Growth Score</h6>
             </div>
@@ -208,11 +221,11 @@ class PredictiveAnalytics extends React.Component {
                 <div className="col-4 border-left border-dark"><label>20.56%</label><span className="ml-2 tick-down">&#9660;</span> </div>
               </div>
             </div>
+            <HighchartsReact highcharts={Highcharts} options={this.lineOptions(cat, blue, green)} />
           </div>
-          <HighchartsReact highcharts={Highcharts} options={this.lineOptions(cat, blue, green)} />
-          <br />
-          <div>
-            <h6 className="mb-3">Growth Summary</h6>
+
+          <div className="growth-summary">
+            <h6>Growth Summary</h6>
             <div className="scroll-table">
             <table>
               <thead>

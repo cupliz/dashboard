@@ -6,12 +6,12 @@ class CompositeScoring extends React.Component {
   render() {
     return (
       <div className="card composite-scoring">
-        <div className="card-header">
-        <h5 className="card-title ">Qualitative, Macro & ESG Factors</h5>
-        <div className="row pull-right"><div className="rounded-pill"></div>Composite Scoring</div>
-        </div>
         <div className="card-body">
-          <div className="row d-flex justify-content-between pl-3 pr-4">
+          <div>
+          <h5 className="card-title">
+            Qual/Macro/ESG
+            <label className="text-right"><span className="badge"> </span>&nbsp;Composite Scoring</label>
+          </h5>
           </div>
           <h6 >Descriptive</h6>
           <div className="scroll-table">
@@ -37,13 +37,13 @@ class CompositeScoring extends React.Component {
                 <td className="text-secondary pl-0">Number of employeers</td>
                 <td className="text-light">5D1-1000</td>
               </tr>
-              <tr className="border-0">
+              <tr>
                 <td className="text-secondary pl-0">Firm grawth stage classsification </td>
                 <td className="text-light">Late growth stage</td>
               </tr>
-              <tr className="border-bottom table-borderless">
+              <tr>
                 <td className="text-light pl-0">Executive Team</td>
-                <td ><div className="d-inline-block bg-primary rounded-pill text-center text-light border-0 ">5.3</div></td>
+                <td className="text-light"><big className="badge">5.3</big></td>
               </tr>
               </tbody>
             </table>

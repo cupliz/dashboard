@@ -7,7 +7,7 @@ class KYC extends React.Component {
     return (
       <div className="card kyc">
         <div className="card-header">
-          <h5 className="card-title">KYC</h5>
+          <h5 className="card-title">KYC Monitor</h5>
         </div>
         <div className="card-body">
           <div className="row">

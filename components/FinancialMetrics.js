@@ -7,7 +7,22 @@ import HighchartsReact from "highcharts-react-official";
 // import { columnOptions } from './Options'
 
 class FinancialMetrics extends React.Component {
-  componentDidMount() { }
+  state = {
+    screenHeight: 1920,
+    screenWidth: 1080
+  }
+  async componentDidMount() {
+    window.addEventListener("resize", this.updateDimensions);
+    this.updateDimensions()
+  }
+  componentWillUnmount = () => {
+    window.removeEventListener("resize", this.updateDimensions);
+  }
+  updateDimensions = () => {
+    const screenWidth = window.innerWidth
+    const screenHeight = window.innerHeight
+      this.setState({screenWidth, screenHeight});
+  }
   columnOptions = (data, type, width) => {
     const options = {
       chart: {
@@ -143,7 +158,7 @@ class FinancialMetrics extends React.Component {
     return (
       <div className="card financial-metrics">
         <div className="card-body">
-          <h5 className="card-title">Key Financial Metrics</h5>
+          <h5 className="card-title">Key Financials</h5>
           <div className="scroll-table">
             <table className="table">
               <thead>
@@ -156,11 +171,11 @@ class FinancialMetrics extends React.Component {
               </thead>
               <tbody>
               {growthSummary.map((data, index) => (
-                <tr key={index} className={index == 0 ? "table-borderless" : ""}>
-                  <td className="text-light pl-0 pr-5">{data.name}</td>
-                  <td className="text-light ">{data.year2017}</td>
-                  <td className="text-light pl-0">{data.year2018}</td>
-                  <td className="text-light pl-0">
+                <tr key={index} className="text-light">
+                  <td>{data.name}</td>
+                  <td>{data.year2017}</td>
+                  <td>{data.year2018}</td>
+                  <td>
                     <HighchartsReact
                       highcharts={Highcharts}
                       options={this.columnOptions(data.chart, "area", 70)}

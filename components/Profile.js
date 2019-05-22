@@ -1,6 +1,6 @@
 import React from "react";
 
-class BoxTitle extends React.Component {
+class Profile extends React.Component {
   componentDidMount() { }
 
   render() {
@@ -29,19 +29,19 @@ class BoxTitle extends React.Component {
         <div className="card-footer">
           <div className="row">
             <div className="col">
-              <div className="text-secondary">Headquarters:</div>
+              <div className="text-secondary">Headquarters</div>
               <div>London, UK</div>
             </div>
             <div className="col">
-              <div className="text-secondary">Founded:</div>
+              <div className="text-secondary">Founded</div>
               <div>2013</div>
             </div>
             <div className="col">
-              <div className="text-secondary">SIC:</div>
+              <div className="text-secondary">SIC</div>
               <div>62012</div>
             </div>
             <div className="col">
-              <div className="text-secondary">Status:</div>
+              <div className="text-secondary">Status</div>
               <div>Active-Account filed</div>
             </div>
           </div>
@@ -50,4 +50,4 @@ class BoxTitle extends React.Component {
     );
   }
 }
-export default BoxTitle
+export default Profile

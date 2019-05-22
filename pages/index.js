@@ -1,9 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
 import Header from "../components/Header";
-import BoxTitle from "../components/BoxTitle";
+import Profile from "../components/Profile";
 import FinancialMetrics from "../components/FinancialMetrics";
-import Turnover from "../components/Turnover";
+import PeerComps from "../components/PeerComps";
 import KYC from "../components/KYC";
 import WebAnalytics from "../components/WebAnalytics";
 import CompositeScoring from "../components/CompositeScoring";
@@ -21,9 +21,9 @@ class Index extends React.Component {
         <div className="container-fluid">
           <div className="row no-gutters">
             <div className="col-4">
-              <BoxTitle />
+              <Profile />
               <FinancialMetrics />
-              <Turnover />
+              <PeerComps />
             </div>
             <div className="col-4">
               <KYC />
